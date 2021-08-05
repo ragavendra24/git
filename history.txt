@@ -1,0 +1,243 @@
+    1  mkdir /loca.repo
+    2  rm -r /loca.repo/
+    3  mkdir /local.repo
+    4  cd /local.repo/
+    5  pwd
+    6  cd /git-demo/myproject/
+    7  clear
+    8  ls
+    9  git ls-files
+   10  git rm file1.txt 
+   11  ls
+   12  git status
+   13  git commit -a -m "file modifed"
+   14  ls
+   15  git status
+   16  git rm file1.txt 
+   17  ls
+   18  git ls-files
+   19  git status
+   20  git commit -m "file deleted"
+   21  git status
+   22  ls
+   23  git ls-files
+   24  git rm --cached index2.html 
+   25  ls
+   26  git ls-files
+   27  git status
+   28  vim .gitignore
+   29  git status
+   30  git add .
+   31  git commit -m "added ignore"
+   32  git status
+   33  ls
+   34  git ls-files
+   35  ll -al
+   36  git log
+   37  git log --oneline
+   38  git revert 57c3d38 "revert gitignore"
+   39  git status
+   40  git revert 57c3d38
+   41  git status
+   42  git revert 6941ac5
+   43  git status
+   44  git log --online
+   45  git log --oneline
+   46  ls
+   47  git ls-files
+   48  git revert 57c3d38
+   49  vim file2.txt
+   50  git status
+   51  git add .
+   52  git status
+   53  vim .gitignore 
+   54  git status
+   55  git commit -a -m "gitignore file2"
+   56  git status
+   57  ls
+   58  git ls-files
+   59  git rm --cache file2.txt 
+   60  ls
+   61  git ls-files
+   62  git status
+   63  git commit -a -m "file2 deleted"
+   64  git status
+   65  vim file2.txt 
+   66  git status
+   67  poweroff
+   68  clear
+   69  cd /git-demo/myproject/
+   70  clear
+   71  git status
+   72  git log --oneline
+   73  git reset --hard 6e8674a
+   74  git log --oneline
+   75  git status
+   76  ls
+   77  git reset --hard
+   78  git log --oneline
+   79  git reset --hard af37de1
+   80  git status
+   81  ls
+   82  git ls-files
+   83  vim .gitignore
+   84  git status
+   85  git reset --hard af37de1
+   86  git status
+   87  git log --oneline
+   88  ls
+   89  git ls-files
+   90  ls -al
+   91  rm .gitignore 
+   92  git status
+   93  rm file2.txt 
+   94  ls
+   95  git status
+   96  git log --oneline
+   97  git branch ragav master
+   98  git branch
+   99  git checkout ragav
+  100  git status
+  101  ls
+  102  git status
+  103  git branch
+  104  git log --oneline ragav
+  105  ls
+  106  vim index3.html
+  107  git stauts
+  108  git status
+  109  git add index3.html 
+  110  ls
+  111  git commit -m "changes on ragav"
+  112  git log --online
+  113  git log --oneline
+  114  git checkout master 
+  115  ls
+  116  git log --online master
+  117  git log --oneline master
+  118  git merge ragav master
+  119   git status
+  120  vim index4.html
+  121  git add index4.html 
+  122  git commit -m index4.html "adding another file"
+  123  git commit -m "dding another file"
+  124  git statuls
+  125  git status
+  126  ls
+  127  git ls-files
+  128  git checkout ragav
+  129  git status
+  130  ls
+  131  git ls-files
+  132  git merge master ragav
+  133  ls
+  134  git ls-files
+  135  git log --oneline
+  136  git checkout master
+  137  git log --oneline
+  138  vim index3.html
+  139  vim index2.html
+  140  ls
+  141  git status
+  142  git add index2.html 
+  143  git commit -m "commit index2"
+  144  git log --oneline
+  145  git status
+  146  git checkout ragav
+  147  git log --oneline
+  148  git status
+  149  git merge master ragav
+  150  git log --oneline
+  151  poweroff
+  152  clear
+  153  cd /git-demo/myproject/
+  154  git status
+  155  ls
+  156  vim index5.html
+  157  git add index5.html 
+  158  git status
+  159  git commit -m "conflict test"
+  160  git status
+  161  git checkout master
+  162  ls
+  163  git merge master ragav
+  164  ls
+  165  git status
+  166  git ls-files
+  167  ls
+  168  vim index6.html
+  169  ls
+  170  git ls-files
+  171  git add index6.html 
+  172  git ls-files
+  173  git commit -m "commit for index6"
+  174  git status
+  175  git merge master ragav
+  176  git checkout ragav
+  177  ls
+  178  git ls-files
+  179  git merge ragav master
+  180  vim index6.html
+  181  git status
+  182  git checkout master
+  183  git status
+  184  git add index6.html 
+  185  git commit -m "con"
+  186  git status
+  187  vim index6.html 
+  188  git checkout ragav 
+  189  git status
+  190  git commit -a
+  191  git commit -a -m "master confilict"
+  192  git checkout ragav 
+  193  ls 
+  194  git ls-files
+  195  vim index6.html 
+  196  git commit -a -m "ragav conflict"
+  197  git status
+  198  git merge ragav master
+  199  poweroff
+  200  clear
+  201  git status
+  202  cd /git-demo/myproject/
+  203  git status
+  204  git commit -a -m "mod"
+  205  git status
+  206  ls
+  207  git checkout ragav
+  208  git checkout master
+  209  git status
+  210  vim index4.html 
+  211  vig index6.html 
+  212  vim index6.html 
+  213  clear
+  214  git status
+  215  git stash 
+  216  git status
+  217  git stash list
+  218  git show stash@{0}
+  219  git stash pop stash@{0}
+  220  git stash apply stash{0}
+  221  git stash apply stash@{0}
+  222  git stash list
+  223  git stash
+  224  git stash list
+  225  git stash apply stash@{0}
+  226  git stash list
+  227  git stash -p
+  228  git status
+  229  git stash
+  230  git stash list
+  231  cd /git-demo/myproject/
+  232  clear
+  233  history
+  234  history << history.txt
+
+
+  235  ls
+  236  git ls
+  237  git ls-files
+  238  git branch -a
+  239  clear
+  240  touch history.txt
+  241  history >> history.txt 
